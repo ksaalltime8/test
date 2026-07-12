@@ -5,6 +5,12 @@ import { fileURLToPath } from "url";
 import linesRouter from "./routes/lines.js";
 
 
+app.use(cors({
+    origin:[
+        "https://lines.k7devs.com",
+        "http://localhost:5500"
+    ]
+}));
 const app = express();
 
 
