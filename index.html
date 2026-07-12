@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crewly | Smart Bidding</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="brand">
+✈ Crewly
+</div>
+
+
+<div class="crew-profile">
+
+<h3>
+Good Morning, Khaled
+</h3>
+
+<p>
+BC • JED • B787
+</p>
+
+</div>
+
+</header>
+
+
+
+
+
+<main>
+
+
+<!-- FILTER AREA -->
+
+<section class="filters">
+
+
+<h2>
+Find Your Best Line
+</h2>
+
+
+<select id="aircraftFilter">
+
+<option value="all">
+All Aircraft
+</option>
+
+<option value="B787">
+B787
+</option>
+
+<option value="B777">
+B777
+</option>
+
+<option value="A320">
+A320
+</option>
+<option value="A330">
+A330
+</option>
+
+</select>
+
+
+
+<select id="layoverFilter">
+
+<option value="0">
+Any Layover
+</option>
+
+<option value="48">
+48 Hours +
+</option>
+
+<option value="72">
+72 Hours +
+</option>
+
+
+</select>
+
+
+
+<input 
+id="destinationFilter"
+placeholder="Search destination">
+
+
+<button onclick="applyFilters()">
+Search
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- AVAILABLE LINES -->
+
+
+<section class="lines-section">
+
+
+<h2>
+July 2026 Available Lines
+</h2>
+
+
+<div id="linesContainer">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- BID SHEET -->
+
+
+<aside class="bid-sheet">
+
+
+<h2>
+My Bid Sheet
+</h2>
+
+
+<div id="bidContainer">
+
+</div>
+
+
+
+</aside>
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+<!-- DETAILS MODAL -->
+
+
+<div id="detailsModal" class="modal">
+
+
+<div class="modal-content">
+
+
+<span 
+onclick="closeDetails()"
+class="close">
+×
+</span>
+
+
+<div id="detailsContent">
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+<script src="app.mjs"></script>
+
+
+</body>
+
+</html>

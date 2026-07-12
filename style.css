@@ -1,0 +1,516 @@
+*{
+    box-sizing:border-box;
+    font-family:Inter,Arial,sans-serif;
+}
+
+
+body{
+
+    margin:0;
+    background:#050505;
+    color:white;
+
+}
+
+
+
+/* HEADER */
+
+
+header{
+
+    height:85px;
+    background:#101010;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 40px;
+
+    border-bottom:1px solid #222;
+
+}
+
+
+
+.brand{
+
+    font-size:32px;
+    font-weight:800;
+    color:#ff003c;
+
+}
+
+
+
+.crew-profile{
+
+    text-align:right;
+
+}
+
+
+
+.crew-profile h3{
+
+    margin:0;
+
+}
+
+
+
+.crew-profile p{
+
+    color:#aaa;
+    margin:5px 0;
+
+}
+
+
+
+
+
+
+/* MAIN LAYOUT */
+
+
+main{
+
+    display:grid;
+
+    grid-template-columns:260px 1fr 320px;
+
+    gap:20px;
+
+    padding:25px;
+
+}
+
+
+
+
+
+
+/* FILTERS */
+
+
+.filters,
+.bid-sheet{
+
+    background:#111;
+
+    padding:20px;
+
+    border-radius:16px;
+
+    height:max-content;
+
+}
+
+
+
+.filters h2,
+.bid-sheet h2{
+
+    margin-top:0;
+
+}
+
+
+
+select,
+input{
+
+    width:100%;
+
+    padding:13px;
+
+    margin-bottom:12px;
+
+    background:#1c1c1c;
+
+    border:1px solid #333;
+
+    color:white;
+
+    border-radius:8px;
+
+}
+
+
+
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#ff003c;
+
+    border:none;
+
+    color:white;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+
+
+button:hover{
+
+    opacity:.85;
+
+}
+
+
+
+
+
+
+
+/* LINE CARDS */
+
+
+.lines-section{
+
+    background:#111;
+
+    padding:25px;
+
+    border-radius:16px;
+
+}
+
+
+
+.line-card{
+
+
+background:#171717;
+
+border:1px solid #292929;
+
+border-radius:15px;
+
+padding:20px;
+
+margin-bottom:15px;
+
+transition:.2s;
+
+
+}
+
+
+
+.line-card:hover{
+
+transform:translateY(-3px);
+
+border-color:#ff003c;
+
+}
+
+
+
+.line-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+.line-number{
+
+font-size:22px;
+
+font-weight:bold;
+
+}
+
+
+
+.match{
+
+
+color:#00ff88;
+
+font-weight:bold;
+
+}
+
+
+
+.info-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:10px;
+
+margin-top:15px;
+
+
+}
+
+
+
+.info-box{
+
+background:#222;
+
+padding:10px;
+
+border-radius:10px;
+
+text-align:center;
+
+}
+
+
+
+.info-box span{
+
+display:block;
+
+color:#aaa;
+
+font-size:12px;
+
+}
+
+
+
+
+
+.details-btn{
+
+margin-top:15px;
+
+background:#333;
+
+}
+
+
+
+
+
+
+/* BID SHEET */
+
+
+.bid-item{
+
+
+background:#1b1b1b;
+
+padding:15px;
+
+border-radius:10px;
+
+margin-bottom:10px;
+
+
+}
+
+
+
+.bid-item small{
+
+color:#aaa;
+
+}
+
+
+
+.bid-controls{
+
+display:flex;
+
+gap:5px;
+
+margin-top:10px;
+
+}
+
+
+
+.bid-controls button{
+
+padding:8px;
+
+background:#333;
+
+}
+
+
+
+
+
+/* MODAL */
+
+
+.modal{
+
+
+display:none;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+
+background:rgba(0,0,0,.8);
+
+
+justify-content:center;
+
+align-items:center;
+
+
+}
+
+
+
+.modal-content{
+
+
+background:#111;
+
+width:700px;
+
+max-width:90%;
+
+max-height:85vh;
+
+overflow:auto;
+
+
+padding:30px;
+
+border-radius:20px;
+
+
+border:1px solid #333;
+
+
+}
+
+
+
+.close{
+
+
+float:right;
+
+font-size:30px;
+
+cursor:pointer;
+
+color:#ff003c;
+
+
+}
+
+
+
+
+
+
+/* DETAILS */
+
+
+.flight{
+
+
+background:#1b1b1b;
+
+padding:15px;
+
+border-radius:10px;
+
+margin:10px 0;
+
+
+}
+
+
+
+.route{
+
+
+font-size:20px;
+
+font-weight:bold;
+
+
+}
+
+
+
+.time{
+
+
+color:#aaa;
+
+}
+
+
+
+
+
+.layover{
+
+
+background:#222;
+
+padding:15px;
+
+border-radius:10px;
+
+margin:15px 0;
+
+
+}
+
+
+
+
+@media(max-width:1000px){
+
+
+main{
+
+grid-template-columns:1fr;
+
+}
+
+
+.info-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
