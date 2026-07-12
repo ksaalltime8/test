@@ -24,7 +24,11 @@ async function loadLines() {
         console.log("Lines loaded:", data);
 
 
-        lines = data.lines || data;
+        if(data.success){
+    lines = data.lines;
+} else {
+    lines = data;
+}
 
 
         displayLines(lines);
