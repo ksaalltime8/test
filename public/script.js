@@ -10,7 +10,7 @@ async function loadLines() {
 
     try {
 
-        fetch("https://lines.k7devs.com/api/lines")
+       const response = await fetch("/api/lines");
 
 
         if (!response.ok) {
