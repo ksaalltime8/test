@@ -10,7 +10,7 @@ async function loadLines() {
 
     try {
 
-        fetch("http://localhost:3000/api/lines")
+        fetch("https://lines.k7devs.com/api/lines")
 
 
         if (!response.ok) {
