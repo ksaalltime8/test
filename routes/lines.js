@@ -1,28 +1,30 @@
 import express from "express";
+import axios from "axios";
 
 const router = express.Router();
 
+router.get("/", async (req, res) => {
+    try {
 
-router.get("/", (req,res)=>{
-
-    res.json({
-
-        success:true,
-
-        lines:[
+        const response = await axios.get(
+            "https://vpn.saudia.com:11011/Apps/FOP/COBS/Lines/GetBidDetails?linesOfTimeId=6493",
             {
-                lineNo:"2401",
-                aircraft:"B787",
-                route:"JED-GVA",
-                block:"54:35",
-                credit:"62:10",
-                layover:"48H"
+                headers: {
+                    // You would eventually need the authenticated session cookies here.
+                }
             }
-        ]
+        );
 
-    });
+        res.json(response.data);
 
+    } catch (err) {
+        console.error(err.message);
+
+        res.status(500).json({
+            success: false,
+            error: err.message
+        });
+    }
 });
-
 
 export default router;
