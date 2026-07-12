@@ -20,7 +20,7 @@ app.use(express.json());
 
 
 
-// API ROUTE
+// API
 app.use(
     "/api/lines",
     linesRouter
@@ -28,17 +28,16 @@ app.use(
 
 
 
-// WEBSITE FILES
-
+// FRONTEND
 app.use(
     express.static(
-        path.join(__dirname,"public")
+        path.join(__dirname, "public")
     )
 );
 
 
 
-app.get("/", (req,res)=>{
+app.get("*", (req,res)=>{
 
     res.sendFile(
         path.join(
@@ -52,12 +51,13 @@ app.get("/", (req,res)=>{
 
 
 
+const PORT = process.env.PORT || 3000;
 
 
-app.listen(3000,()=>{
+app.listen(PORT, ()=>{
 
-console.log(
-"Crewly server running"
-);
+    console.log(
+        `Crewly running on ${PORT}`
+    );
 
 });
